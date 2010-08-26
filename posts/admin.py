@@ -8,4 +8,4 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['question']
     date_hierarchy = 'pub_date'
 
-admin.site.register(Post, PostAdmin)
+admin.site.register(Post, PostAdmin) 

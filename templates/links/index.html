@@ -1,5 +1,5 @@
 {% comment %} title {% endcomment %}
-<title>MillerTime - Blog</title>
+<title>MillerTime - Links</title>
 <p align="center" style="font-size:30px"><b>Miller Time</b></p>
 
 
@@ -8,25 +8,23 @@
 <table border="0">
     <tr>
         <td><a href="/">home </a></td> 
-        <td><b>blog </b></td>
-        <td><a href="/links/">links </a></td>
+        <td><a href="/blog/">blog </a></td>
+        <td><b>links </b></td>
         <td><a href="/aboutme/">aboutme</a></td>
     </tr>
 </table>
 
 
 {% comment %} body {% endcomment %}
-{% if latest_blogs_list %}
+{% if links_list %}
     <p align="center">
     <table width="500" border="0">
-    {% for blog in latest_blogs_list %}
+    {% for link in links_list %}
         <tr><td align="left">
-        <b><big>{{ blog.title }}</big><br />
-        Date Published: {{ blog.pub_date }}<br /></b>
-        {{ blog.body|linebreaksbr }}<br /><br /></td></tr>
+        <b><big>{{ link.title }}</big></b><br />
+        {{ link.location|urlize }}<br />
     {% endfor %}
-    <tr><td><a href="/admin/">admin</a> | <a href="/archive/">archive</a></td></tr>
     </table></p>
 {% else %}
-    <p align="center"> No blogs created yet.</p>
+    <p align="center"> No links added yet.</p>
 {% endif %}

@@ -3,7 +3,7 @@
 
 # Django settings for blog project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -88,4 +88,5 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'posts',
     'django.contrib.admin',
+    'links',
 )

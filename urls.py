@@ -5,6 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^/?$', 'blog.posts.views.index'),
+    (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/media/favicon.ico'}),
     (r'^blog/$', 'blog.posts.views.blogs'),
     (r'^archive/$', 'blog.posts.views.archive'),
     (r'^links/$', 'blog.links.views.index'),

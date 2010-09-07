@@ -1,33 +1,51 @@
+<html>
 {% comment %} title {% endcomment %}
-<title>MillerTime - Blog</title>
-<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-<p align="center" style="font-size:30px"><b>Miller Time</b></p>
+<head>
+    <title>MillerTime - Blog</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+    <style type="text/css">
+        body {
+            color:white;
+            background-image:url('/media/pacman.jpg');
+            background-repeat:no-repeat;
+            background-color:black;
+            background-position:center top;
+        }
+        a {
+            text-decoration:none;
+            color:gray;
+        }
+    </style>
+</head>
 
+<body>
+    <p align="center" style="font-size:30px"><b>Miller Time</b></p>
 
-{% comment %} navbar {% endcomment %}
-<p align="center">
-<table border="0">
-    <tr>
-        <td><a href="/">home </a></td> 
-        <td><b>blog </b></td>
-        <td><a href="/links/">links </a></td>
-        <td><a href="/aboutme/">aboutme</a></td>
-    </tr>
-</table>
-
-
-{% comment %} body {% endcomment %}
-{% if latest_blogs_list %}
+    {% comment %} navbar {% endcomment %}
     <p align="center">
-    <table width="500" border="0">
-    {% for blog in latest_blogs_list %}
-        <tr><td align="left">
-        <b><big>{{ blog.title }}</big><br />
-        Date Published: {{ blog.pub_date }}<br /></b>
-        {{ blog.body|linebreaksbr }}<br /><br /></td></tr>
-    {% endfor %}
-    <tr><td><a href="/admin/">admin</a> | <a href="/archive/">archive</a></td></tr>
-    </table></p>
-{% else %}
-    <p align="center"> No blogs created yet.</p>
-{% endif %}
+        <table border="0">
+            <tr>
+                <td><a href="/">home </a></td> 
+                <td><b>blog </b></td>
+                <td><a href="/links/">links </a></td>
+                <td><a href="/aboutme/">aboutme</a></td>
+            </tr>
+        </table>
+
+    {% comment %} body {% endcomment %}
+    {% if latest_blogs_list %}
+        <p align="center">
+        <table width="500" border="0">
+        {% for blog in latest_blogs_list %}
+            <tr><td align="left">
+            <b><big>{{ blog.title }}</big><br />
+            Date Published: {{ blog.pub_date }}<br /></b>
+            {{ blog.body|linebreaksbr }}<br /><br /></td></tr>
+        {% endfor %}
+        <tr><td><a href="/admin/">admin</a> | <a href="/archive/">archive</a></td></tr>
+        </table></p>
+    {% else %}
+        <p align="center"> No blogs created yet.</p>
+    {% endif %}
+</body>
+</html>

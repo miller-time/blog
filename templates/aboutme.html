@@ -1,23 +1,39 @@
-{% comment %} title {% endcomment %}
-<title>MillerTime - About Me</title>
-<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-<p align="center" style="font-size:30px"><b>Miller Time</b></p>
+<html>
+<head>
+    {% comment %} title {% endcomment %}
+    <title>MillerTime - About Me</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+    <style type="text/css">
+        body {
+            color:white;
+            background-image:url('/media/pacman.jpg');
+            background-repeat:no-repeat;
+            background-color:black;
+            background-position:center top;
+        }
+        a {
+            text-decoration:none;
+            color:gray;
+        }
+    </style>
+</head>
 
+<body>
+    <p align="center" style="font-size:30px"><b>Miller Time</b></p>
 
-{% comment %} navbar {% endcomment %}
-<p align="center">
-<table border="0">
-    <tr>
-        <td><a href="/">home </a></td> 
-        <td><a href="/blog/">blog </a></td>
-        <td><a href="/links/">links </a></td>
-        <td><b>aboutme</b></td>
-    </tr>
-</table>
+    {% comment %} navbar {% endcomment %}
+    <p align="center">
+    <table border="0">
+        <tr>
+            <td><a href="/">home </a></td> 
+            <td><a href="/blog/">blog </a></td>
+            <td><a href="/links/">links </a></td>
+            <td><b>aboutme</b></td>
+        </tr>
+    </table>
 
-
-{% comment %} body {% endcomment %}
-<p align="center">
+    {% comment %} body {% endcomment %}
+    <p align="center">
 Hi, my name is Russell. I'm a Computer Science student at Portland State<br />
 University. This is a relatively new website I've created, and I'm not a web<br />
 developer or designer. This is mostly for me to have a place to write a personal<br />
@@ -30,4 +46,6 @@ have been in and out of school. This is the most focus I have ever had and I'm<b
 extremely excited about Computer Science and programming. I've done some work<br />
 with C, lots of "learning" with C++, some Java, some Haskell, a glimpse at Ruby, <br />
 and lately lots and lots of Python - my favorite so far.<br />
-</p>
+    </p>
+</body>
+</html>

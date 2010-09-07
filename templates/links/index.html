@@ -1,31 +1,49 @@
-{% comment %} title {% endcomment %}
-<title>MillerTime - Links</title>
-<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-<p align="center" style="font-size:30px"><b>Miller Time</b></p>
+<html>
+<head>
+    {% comment %} title {% endcomment %}
+    <title>MillerTime - Links</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+    <style type="text/css">
+        body {
+            color:white;
+            background-image:url('/media/pacman.jpg');
+            background-repeat:no-repeat;
+            background-color:black;
+            background-position:center top;
+        }
+        a {
+            text-decoration:none;
+            color:gray;
+        }
+    </style>
+</head>
 
+<body>
+    <p align="center" style="font-size:30px"><b>Miller Time</b></p>
 
-{% comment %} navbar {% endcomment %}
-<p align="center">
-<table border="0">
-    <tr>
-        <td><a href="/">home </a></td> 
-        <td><a href="/blog/">blog </a></td>
-        <td><b>links </b></td>
-        <td><a href="/aboutme/">aboutme</a></td>
-    </tr>
-</table>
-
-
-{% comment %} body {% endcomment %}
-{% if links_list %}
+    {% comment %} navbar {% endcomment %}
     <p align="center">
-    <table width="500" border="0">
-    {% for link in links_list %}
-        <tr><td align="left">
-        <b><big>{{ link.title }}</big></b><br />
-        {{ link.location|urlize }}<br />
-    {% endfor %}
-    </table></p>
-{% else %}
-    <p align="center"> No links added yet.</p>
-{% endif %}
+    <table border="0">
+        <tr>
+            <td><a href="/">home </a></td> 
+            <td><a href="/blog/">blog </a></td>
+            <td><b>links </b></td>
+            <td><a href="/aboutme/">aboutme</a></td>
+        </tr>
+    </table>
+
+    {% comment %} body {% endcomment %}
+    {% if links_list %}
+    <p align="center">
+        <table width="500" border="0">
+        {% for link in links_list %}
+            <tr><td align="left">
+            <b><big>{{ link.title }}</big></b><br />
+            {{ link.location|urlize }}<br />
+        {% endfor %}
+        </table></p>
+    {% else %}
+        <p align="center"> No links added yet.</p>
+    {% endif %}
+</body>
+</html>

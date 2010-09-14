@@ -10,6 +10,8 @@ urlpatterns = patterns('',
     (r'^archive/$', 'blog.posts.views.archive'),
     (r'^links/$', 'blog.links.views.index'),
     (r'^aboutme/$', 'blog.posts.views.aboutme'),
+    (r'^scorekeeper/$', 'blog.scorekeeper.views.index'),
+    (r'^players/$', 'blog.scorekeeper.views.players'),
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
 )

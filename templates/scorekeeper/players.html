@@ -1,8 +1,8 @@
 <html>
-{% comment %} title {% endcomment %}
 <head>
-    <title>Page Not Found</title>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+    {% comment %} title {% endcomment %}
+    <title>MillerTime - Scorekeeper(Players)</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
     <style type="text/css">
         body {
             color:white;
@@ -21,23 +21,22 @@
 <body>
     <p align="center" style="font-size:30px"><b>Miller Time</b></p>
 
-
     {% comment %} navbar {% endcomment %}
     <p align="center">
     <table border="0">
         <tr>
             <td><a href="/">home </a></td> 
             <td><a href="/blog/">blog </a></td>
-            <td><a href="/links/">links </a></td>
+            <td><b>links </b></td>
             <td><a href="/aboutme/">aboutme</a></td>
         </tr>
     </table>
 
     {% comment %} body {% endcomment %}
-    <h1 align="center">Page Not Found</h1><br />
-    <p align="center">
-    <b>Please use the above links to navigate to<br />
-    another page or use your browser's back button<br />
-    to return whence you came.</b></p>
+    <form action="/players/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+    </form>
 </body>
 </html>

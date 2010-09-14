@@ -1,9 +1,6 @@
-#import os
-#rel = lambda *x: os.path.join(os.path.abspath(os.path.dirname(__file__)), *x)
-
 # Django settings for blog project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -15,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', 
-	'NAME': '/var/www/blog/sqlite.db',
+	    'NAME': '/var/www/blog/sqlite.db',
     }
 }
 
@@ -86,7 +83,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    'posts',
     'django.contrib.admin',
+    'posts',
     'links',
+    'scorekeeper',
 )

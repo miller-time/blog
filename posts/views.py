@@ -14,3 +14,6 @@ def archive(request):
 
 def aboutme(request):
     return render_to_response('aboutme.html',)
+
+def schedule(request):
+    return render_to_response('schedule.html',)

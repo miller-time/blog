@@ -27,7 +27,7 @@
         <tr>
             <td><a href="/">home </a></td> 
             <td><a href="/blog/">blog </a></td>
-            <td><b>links </b></td>
+            <td><a href="/links/">links </a></td>
             <td><a href="/aboutme/">aboutme</a></td>
         </tr>
     </table>
@@ -38,6 +38,7 @@
         {% for s in score_card %}
         <big>{{ s.title }}</big><br />
         {% endfor %}
+        <a href="/scorekeeper/players">add a player</a>
     </p>
     {% else %}
         <p align="center">Whoops, not set up yet!</p>

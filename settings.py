@@ -1,5 +1,8 @@
 # Django settings for blog project.
 
+install_loc = '/home/millertime/hax/blog/'
+#install_loc = '/var/www/blog/'
+
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
@@ -12,7 +15,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', 
-	    'NAME': '/var/www/blog/sqlite.db',
+	    'NAME': install_loc + 'sqlite.db',
     }
 }
 
@@ -41,7 +44,7 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/var/www/blog/media'
+MEDIA_ROOT = install_loc + 'media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -74,7 +77,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'blog.urls'
 
 TEMPLATE_DIRS = (
-    '/var/www/blog/templates'
+    install_loc + 'templates'
 )
 
 INSTALLED_APPS = (

@@ -1,18 +1,17 @@
 from django.db import models
 from django import forms
+from django.forms import ModelForm
 
-class Scorecard(models.Model):
-    title = models.CharField(max_length=50)
-    
-    def __unicode__(self):
-        return self.title
 
 class Player(models.Model):
     name = models.CharField(max_length=10)
     score = models.IntegerField()
 
-class PlayerForm(forms.Form):
-    name = forms.CharField(max_length=10)
+class PlayerForm(ModelForm):
+    class Meta:
+        model = Player
 
-class UpdateForm(forms.Form):
-    score = forms.IntegerField()
+class UpdateForm(ModelForm):
+    class Meta:
+        model = Player
+        fields = ('score',)

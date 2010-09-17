@@ -1,8 +1,8 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
-from blog.scorekeeper.models import Scorecard, PlayerForm, Player, UpdateForm
-from django.forms.formsets import formset_factory
+from blog.scorekeeper.models import PlayerForm, Player, UpdateForm
+from django.forms.models import modelformset_factory
 
 def index(request):
     players = Player.objects.all()
@@ -24,19 +24,16 @@ def index(request):
 def play(request):
     players = Player.objects.all()
     num_p = len(players)
-    UpdateFormSet = formset_factory(UpdateForm, extra=num_p-1)
+    UpdateFormSet = modelformset_factory(UpdateForm)
     if request.method == "POST":
-        formset = UpdateFormSet(initial=[{'score': 0}])
+        formset = UpdateFormSet(request.POST)
         if formset.is_valid():
             i = 0
             for form in formset.forms:
-                points = form.cleaned_data['score']
-                players[i].score += points
-                players[i].save()
-                i += 1
+                Player.objects.filter(pk=player.pk).update(score=F('score')+points)
             return HttpResponseRedirect('/scorekeeper/play')
     else:
-        formset = UpdateFormSet(initial=[{'score': 0}])
+        formset = UpdateFormSet()
 
     return render_to_response('scorekeeper/play.html', {
         'formset': formset,

@@ -42,20 +42,27 @@
         <table>
             <tr>
                 {% for p in players %}
-                <td width="80">{{ p.name }}</td>
+                    <td width="160">{{ p.name }}</td>
+                {% endfor %}
+                <td width="30">
+            </tr>
+            <tr>
+                {% for p in players %}
+                    <td>{{ p.score }}</td>
                 {% endfor %}
             </tr>
         </table>
         </p>
     {% endif %}
-    <form action="/scorekeeper/" method="post" align="center">
+    <form action="/scorekeeper/play" method="post" align="center">
     {% csrf_token %}
-    {{ addplayer.as_p }}
-    <input type="submit" value="Add Player" />
+    {% for form in formset.forms %}
+        {{ form.score }}
+    {% endfor %}
+    <input type="submit" value="Update" />
     </form>
     <p align="center">
-        <a href="/scorekeeper/play">Start Game</a> | 
-        <a href="/scorekeeper/end">Quit</a>
+        <a href="/scorekeeper/end">End Game</a>
     </p>
 </body>
 </html>

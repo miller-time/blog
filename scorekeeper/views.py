@@ -1,23 +1,51 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
-from blog.scorekeeper.models import Scorecard, PlayerForm
+from blog.scorekeeper.models import Scorecard, PlayerForm, Player, UpdateForm
+from django.forms.formsets import formset_factory
 
 def index(request):
-    score_card = Scorecard.objects.all()
-    return render_to_response('scorekeeper/index.html', {
-        'score_card': score_card
-    })
-
-def players(request):
+    players = Player.objects.all()
     if request.method == "POST": # if form has been submitted
-        form = PlayerForm(request.POST) # form bound to POST data
-        if form.is_valid(): # passes all validation rules
-            # process data
+        addplayer = PlayerForm(request.POST) # form bound to POST data
+        if addplayer.is_valid(): # passes all validation rules
+            fname = addplayer.cleaned_data['name']
+            p = Player(name=fname, score=0)
+            p.save()
             return HttpResponseRedirect('/scorekeeper/') # redirect after POST
     else:
-        form = PlayerForm() # unbound form
+        addplayer = PlayerForm() # unbound form
 
-    return render_to_response('scorekeeper/players.html', {
-        'form': form,
+    return render_to_response('scorekeeper/index.html', {
+        'addplayer': addplayer,
+        'players': players,
     }, context_instance=RequestContext(request))
+
+def play(request):
+    players = Player.objects.all()
+    num_p = len(players)
+    UpdateFormSet = formset_factory(UpdateForm, extra=num_p-1)
+    if request.method == "POST":
+        formset = UpdateFormSet(initial=[{'score': 0}])
+        if formset.is_valid():
+            i = 0
+            for form in formset.forms:
+                points = form.cleaned_data['score']
+                players[i].score += points
+                players[i].save()
+                i += 1
+            return HttpResponseRedirect('/scorekeeper/play')
+    else:
+        formset = UpdateFormSet(initial=[{'score': 0}])
+
+    return render_to_response('scorekeeper/play.html', {
+        'formset': formset,
+        'players': players,
+    }, context_instance=RequestContext(request))
+    
+def end(request):
+    players = Player.objects.all()
+    # find winner..
+    for p in players:
+        p.delete()
+    return render_to_response('scorekeeper/end.html')

@@ -1,7 +1,7 @@
 <html>
 <head>
     {% comment %} title {% endcomment %}
-    <title>MillerTime - Scorekeeper(Players)</title>
+    <title>MillerTime - Scorekeeper</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
     <style type="text/css">
         body {
@@ -31,12 +31,14 @@
             <td><a href="/aboutme/">aboutme</a></td>
         </tr>
     </table>
+    </p>
 
     {% comment %} body {% endcomment %}
-    <form action="/scorekeeper/players" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit" />
-    </form>
-</body>
+    <p align="center">
+        <big>Scorecard<br />
+        <br />
+        Game Over!</big><br />
+        <a href="/scorekeeper/">New Game</a>
+    </p>
+    </body>
 </html>

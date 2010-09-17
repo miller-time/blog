@@ -1,7 +1,7 @@
 # Django settings for blog project.
 
-install_loc = '/home/millertime/hax/blog/'
-#install_loc = '/var/www/blog/'
+#install_loc = '/home/millertime/hax/blog/'
+install_loc = '/var/www/blog/'
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG

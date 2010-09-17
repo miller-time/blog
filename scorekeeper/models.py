@@ -13,3 +13,6 @@ class Player(models.Model):
 
 class PlayerForm(forms.Form):
     name = forms.CharField(max_length=10)
+
+class UpdateForm(forms.Form):
+    score = forms.IntegerField()

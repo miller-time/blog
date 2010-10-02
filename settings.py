@@ -3,7 +3,7 @@
 #install_loc = '/home/millertime/hax/blog/'
 install_loc = '/var/www/blog/'
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

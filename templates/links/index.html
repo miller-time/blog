@@ -6,23 +6,24 @@
     <style type="text/css">
         body {
             color:white;
-            background-image:url('/media/pacman.jpg');
+            background-image:url('/media/ramona.jpg');
             background-repeat:no-repeat;
-            background-color:black;
-            background-position:center top;
+            background-color:blue;
+            background-attachment:fixed;
+            background-position:left top;
         }
         a {
             text-decoration:none;
-            color:gray;
+            color:red;
         }
     </style>
 </head>
 
 <body>
-    <p align="center" style="font-size:30px"><b>Miller Time</b></p>
+    <p align="right" style="font-size:30px"><b>Miller Time</b></p>
 
     {% comment %} navbar {% endcomment %}
-    <p align="center">
+    <p align="right">
     <table border="0">
         <tr>
             <td><a href="/">home </a></td> 
@@ -34,16 +35,16 @@
 
     {% comment %} body {% endcomment %}
     {% if links_list %}
-    <p align="center">
+    <p align="right">
         <table width="500" border="0">
         {% for link in links_list %}
-            <tr><td align="left">
+            <tr><td align="right">
             <b><big>{{ link.title }}</big></b><br />
             {{ link.location|urlize }}<br />
         {% endfor %}
         </table></p>
     {% else %}
-        <p align="center"> No links added yet.</p>
+        <p align="right"> No links added yet.</p>
     {% endif %}
 </body>
 </html>

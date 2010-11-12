@@ -1,11 +1,28 @@
-{% comment %} title {% endcomment %}
-<title>MillerTime - Archive</title>
-<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-<p align="center" style="font-size:30px"><b>Miller Time</b></p>
-
+<html>
+<head>
+    {% comment %} title {% endcomment %}
+    <title>MillerTime - Archive</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+    <style type="text/css">
+        body {
+            color:white;
+            background-image:url('/media/ramona.jpg');
+            background-repeat:no-repeat;
+            background-color:blue;
+            background-attachment:fixed;
+            background-position:left top;
+        }
+        a {
+            text-decoration:none;
+            color:red;
+        }
+    </style>
+    </head>
+<body>
+<p align="right" style="font-size:30px"><b>Miller Time</b></p>
 
 {% comment %} navbar {% endcomment %}
-<p align="center">
+<p align="right">
 <table border="0">
     <tr>
         <td><a href="/">home </a></td> 
@@ -18,7 +35,7 @@
 
 {% comment %} body {% endcomment %}
 {% if latest_blogs_list %}
-    <p align="center">
+    <p align="right">
     <table width="500" border="0">
     	<tr><td align="center"><b>Blog Archive</b></td></tr>
     {% for blog in latest_blogs_list %}
@@ -30,5 +47,7 @@
     <tr><td><a href="/admin/">admin</a> | <b>archive</b></td></tr>
     </table></p>
 {% else %}
-    <p align="center"> No blogs created yet.</p>
+    <p align="right"> No blogs created yet.</p>
 {% endif %}
+</body>
+</html>

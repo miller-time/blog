@@ -6,23 +6,24 @@
     <style type="text/css">
         body {
             color:white;
-            background-image:url('/media/pacman.jpg');
+            background-image:url('/media/ramona.jpg');
             background-repeat:no-repeat;
-            background-color:black;
-            background-position:center top;
+            background-color:blue;
+            background-attachment:fixed;
+            background-position:left top;
         }
         a {
             text-decoration:none;
-            color:gray;
+            color:red;
         }
     </style>
 </head>
 
 <body>
-    <p align="center" style="font-size:30px"><b>Miller Time</b></p>
+    <p align="right" style="font-size:30px"><b>Miller Time</b></p>
 
     {% comment %} navbar {% endcomment %}
-    <p align="center">
+    <p align="right">
         <table border="0">
             <tr>
                 <td><b>home </b></td> 
@@ -34,15 +35,25 @@
     </p>
 
     {% comment %} body {% endcomment %}
-    <p align="center">
-    <b>new</b> This is the fresh Python version of the site, reconstructed on<br />
+    <table align="right">
+    <tr><td align="center">
+    <b>new</b> You may notice a huge style change on the site. That's because I<br />
+    finally saw Scott Pilgrim vs. The World. Get used to this style, I am in<br />
+    love with that movie.
+    </td></tr>
+    <tr><td align="center">
+    This is the fresh Python version of the site, reconstructed on<br />
     an Sqlite database to better manage the blog. It's built on Django, and I<br />
-    know little about Django or Sqlite. Having fun with it though!<br /><br />
+    know little about Django or Sqlite. Having fun with it though!
+    </td></tr>
+    <tr><td align="center">
     Thanks for checking out my website! It's still under construction and<br />
     definitely needs work. If you have any suggestions feel free to email me at:<br />
-    miller.time.baby at gmail.com</p>
-    <p align="center">
-        <b>new <a href="/schedule/">Fall Schedule</a></b>
-    </p>
+    miller.time.baby at gmail.com
+    </td></tr>
+    <tr><td align="right">
+        <b><a href="/schedule/">Fall Schedule</a></b>
+    </td></tr>
+    </table>
 </body>
 </html>

@@ -89,5 +89,4 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'posts',
     'links',
-    'scorekeeper',
 )

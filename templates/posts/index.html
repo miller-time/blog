@@ -1,3 +1,4 @@
+{% load markup %}
 <html>
 {% comment %} title {% endcomment %}
 <head>
@@ -41,7 +42,7 @@
             <tr><td align="left">
             <b><big>{{ blog.title }}</big><br />
             Date Published: {{ blog.pub_date }}<br /></b>
-            {{ blog.body|linebreaksbr }}<br /><br /></td></tr>
+            {{ blog.body|markdown:"safe" }}<br /><br /></td></tr>
         {% endfor %}
         <tr><td><a href="/admin/">admin</a> | <a href="/archive/">archive</a></td></tr>
         </table></p>

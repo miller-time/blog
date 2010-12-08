@@ -1,53 +1,58 @@
-{% load markup %}
-<html>
-{% comment %} title {% endcomment %}
+<html>{% load markup %}
 <head>
-    <title>MillerTime - Blog</title>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-    <style type="text/css">
-        body {
-            color:white;
-            background-image:url('/media/ramona.jpg');
-            background-repeat:no-repeat;
-            background-color:blue;
-            background-attachment:fixed;
-            background-position:left top;
-        }
-        a {
-            text-decoration:none;
-            color:red;
-        }
-    </style>
+<title>MillerTime - Blog</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+<style type="text/css">
+    body { color:black; background-color:white; }
+    a { text-decoration:none; color:blue; }
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+<script type="text/javascript"></script>
 </head>
 
 <body>
-    <p align="right" style="font-size:30px"><b>Miller Time</b></p>
+<table id="main" align="center" width="800">
+ <tr><td valign="top">
+ <table id="left" style="position:fixed; float:left; left:100px; top:0px">
+  <tr><td align="center" style="font-size:30px"><b>Miller Time</b>
+  </td></tr>
 
-    {% comment %} navbar {% endcomment %}
-    <p align="right">
-        <table border="0">
-            <tr>
-                <td><a href="/">home </a></td> 
-                <td><b>blog </b></td>
-                <td><a href="/links/">links </a></td>
-                <td><a href="/aboutme/">aboutme</a></td>
-            </tr>
-        </table>
+  <tr><td><img src="/media/scott_pilgrim.jpg" />
+  </td></tr>
 
-    {% comment %} body {% endcomment %}
-    {% if latest_blogs_list %}
-        <p align="right">
-        <table width="450" border="0">
-        {% for blog in latest_blogs_list %}
-            <tr><td align="left">
-            <b><big>{{ blog.title }}</big><br />
-            Date Published: {{ blog.pub_date }}<br /></b>
-            {{ blog.body|markdown:"safe" }}<br /><br /></td></tr>
-        {% endfor %}
-        <tr><td><a href="/admin/">admin</a> | <a href="/archive/">archive</a></td></tr>
-        </table></p>
-    {% else %}
-        <p align="right"> No blogs created yet.</p>
-    {% endif %}
+  <tr><td align="center">
+  <table id="nav" border="0">
+   <tr>
+   <td><a href="/">home </a></td> 
+   <td><b>blog </b></td>
+   <td><a href="/links/">links </a></td>
+   <td><a href="/aboutme/">aboutme</a></td>
+   </tr>
+  </table><!--nav-->
+  </td></tr>
+
+  <tr><td align="center">
+  <a href="/archive/">archive</a>  <a style="color:white" href="/admin/">admin</a> 
+  </td></tr>
+ </table><!--left-->
+ </td>
+
+ <td align="right">
+ {% if latest_blogs_list %}
+ <table id="posts" width="600" style="position:absolute; left:350px; top:0px">
+  {% for blog in latest_blogs_list %}
+  <tr><td align="left">
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br /><br /></td></tr>
+  {% endfor %}
+ </table><!--posts-->
+ {% else %}
+ No blogs created yet.
+ {% endif %}
+ </td></tr>
+</table><!--main-->
+<p align="center" style="position:absolute; bottom:0px">
+<a href="/ie/">View Internet Explorer version of the site</a></p>
 </body>
 </html>

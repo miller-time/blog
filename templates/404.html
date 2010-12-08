@@ -1,44 +1,49 @@
 <html>
-{% comment %} title {% endcomment %}
 <head>
-    <title>Page Not Found</title>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
-    <style type="text/css">
-        body {
-            color:white;
-            background-image:url('/media/ramona.jpg');
-            background-repeat:no-repeat;
-            background-color:blue;
-            background-attachment:fixed;
-            background-position:left top;
-        }
-        a {
-            text-decoration:none;
-            color:red;
-        }
-    </style>
+<title>Page Not Found</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+<style type="text/css">
+    body { color:black; background-color:white; }
+    a { text-decoration:none; color:blue; }
+</style>
 </head>
 
 <body>
-    <p align="right" style="font-size:30px"><b>Miller Time</b></p>
+<table id="main" align="center" width="800">
+ <tr><td valign="top">
+ <table id="left" style="position:fixed; float:left; left:100px; top:0px">
+  <tr><td align="center" style="font-size:30px"><b>Miller Time</b>
+  </td></tr>
 
+  <tr><td><img src="/media/scott_pilgrim.jpg" />
+  </td></tr>
 
-    {% comment %} navbar {% endcomment %}
-    <p align="right">
-    <table border="0">
-        <tr>
-            <td><a href="/">home </a></td> 
-            <td><a href="/blog/">blog </a></td>
-            <td><a href="/links/">links </a></td>
-            <td><a href="/aboutme/">aboutme</a></td>
-        </tr>
-    </table>
+  <tr><td align="center">
+  <table id="nav" border="0">
+   <tr>
+   <td><a href="/">home </a></td> 
+   <td><a href="/blog/">blog </a></td>
+   <td><a href="/links/">links </a></td>
+   <td><a href="/aboutme/">aboutme</a></td>
+   </tr>
+  </table><!--nav-->
+  </td></tr>
 
-    {% comment %} body {% endcomment %}
-    <h1 align="right">Page Not Found</h1><br />
-    <p align="right">
-    <b>Please use the above links to navigate to<br />
-    another page or use your browser's back button<br />
-    to return whence you came.</b></p>
+  <tr><td align="center">
+  <a href="/admin/">admin</a> | <a href="/archive/">archive</a>
+  </td></tr>
+ </table><!--left-->
+ </td>
+
+ <td align="right">
+ <h1 align="left">Page Not Found</h1><br />
+ <p align="left">
+ <b>Please use the nav links to the left to navigate to<br />
+ another page or use your browser's back button<br />
+ to return whence you came.</b></p>
+ </td></tr>
+</table><!--main-->
+<p align="center" style="position:absolute; bottom:0px">
+<a href="/ie/">View Internet Explorer version of the site</a></p>
 </body>
 </html>

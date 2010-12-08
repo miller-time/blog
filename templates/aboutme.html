@@ -1,56 +1,58 @@
 <html>
 <head>
-    {% comment %} title {% endcomment %}
-    <title>MillerTime - About Me</title>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-    <style type="text/css">
-        body {
-            color:white;
-            background-image:url('/media/ramona.jpg');
-            background-repeat:no-repeat;
-            background-color:blue;
-            background-attachment:fixed;
-            background-position:left top;
-        }
-        a {
-            text-decoration:none;
-            color:red;
-        }
-    </style>
+<title>MillerTime - About Me</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+<style type="text/css">
+    body { color:black; background-color:white; }
+    a { text-decoration:none; color:blue; }
+</style>
 </head>
 
 <body>
-    <p align="right" style="font-size:30px"><b>Miller Time</b></p>
+ <table id="main" align="center" width="800">
+  <tr><td valign="top">
+  <table id="left" style="position:fixed; float:left; left:100px; top:0px">
+   <tr><td align="center" style="font-size:30px"><b>Miller Time</b>
+   </td></tr>
 
-    {% comment %} navbar {% endcomment %}
-    <p align="right">
-    <table border="0">
-        <tr>
-            <td><a href="/">home </a></td> 
-            <td><a href="/blog/">blog </a></td>
-            <td><a href="/links/">links </a></td>
-            <td><b>aboutme</b></td>
-        </tr>
-    </table>
+   <tr><td><img src="/media/scott_pilgrim.jpg" />
+   </td></tr>
 
-    {% comment %} body {% endcomment %}
-    <p align="right">
-        Hi, my name is Russell. I'm a Computer Science student at<br />
-        Portland State University. This is a relatively new website<br />
-        I've created, and I'm not a web developer or designer. This<br />
-        is mostly for me to have a place to write a personal blog<br />
-        to write about my experiences with programming, school,<br />
-        work, and whatever else I feel like writing about. I was<br />
-        just accepted to MECOP and will probably have a lot to talk<br />
-        about when that starts this Spring. I hope to be posting my<br />
-        resume somewhere on this site to refer employers to, but<br />
-        for now I'll just say that I've been working remedial jobs<br />
-        for ten years now and have been in and out of school. This<br />
-        is the most focus I have ever had and I'm extremely excited<br />
-        about Computer Science and programming. I've done some work<br />
-        with C, lots of "learning" with C++, some Java, some Haskell,<br />
-        a glimpse at Ruby, and lately lots and lots of Python - my<br />
-        favorite so far.<br />
-    </p>
+   <tr><td align="center">
+   <table id="nav" border="0">
+    <tr>
+    <td><a href="/">home </a></td> 
+    <td><a href="/blog/">blog </a></td>
+    <td><a href="/links/">links </a></td>
+    <td><b>aboutme</b></td>
+    </tr>
+   </table><!--nav-->
+   </td></tr>
+  </table><!--left-->
+  </td>
+
+  <td valign="center">
+  <table id="text" width="600" style="position:absolute; left:350px; top:0px">
+   <tr><td align="center" valign="center">
+   <br /><br />
+    Hi, my name is Russell. I'm a Computer Science student at
+    Portland State University. This is a relatively new website
+    I've created, and I'm not a web developer or designer. This
+    is mostly for me to have a place to write a personal blog
+    to write about my experiences with programming, school,
+    work, and whatever else I feel like writing about. I was
+    accepted to MECOP and will be starting this Spring. I've put a
+    link to their site on my links page. I'm extremely excited
+    about Computer Science and programming. I've done some work
+    with C, lots with C++, some Java, some Haskell, and some Python.
+    This website runs on Django which is a Python web framework.
+    I like to post my code online, feel free to check it out on my
+    Github, which is also on the links page.
+   </td></tr>
+  </table><!--text-->
+  </td></tr>
+</table><!--main-->
+<p align="center" style="position:absolute; bottom:0px">
+<a href="/ie/">View Internet Explorer version of the site</a></p>
 </body>
 </html>

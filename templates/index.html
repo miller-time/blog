@@ -1,59 +1,51 @@
 <html>
-{% comment %} title {% endcomment %}
 <head>
-    <title>MillerTime</title>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
-    <style type="text/css">
-        body {
-            color:white;
-            background-image:url('/media/ramona.jpg');
-            background-repeat:no-repeat;
-            background-color:blue;
-            background-attachment:fixed;
-            background-position:left top;
-        }
-        a {
-            text-decoration:none;
-            color:red;
-        }
-    </style>
+<title>MillerTime</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+<style type="text/css">
+    body { color:black; background-color:white; }
+    a { text-decoration:none; color:blue; }
+</style>
 </head>
 
 <body>
-    <p align="right" style="font-size:30px"><b>Miller Time</b></p>
+ <table id="main" align="center" width="800">
+  <tr><td valign="top">
+  <table id="left" style="position:fixed; float:left; left:100px; top:0px">
+   <tr><td align="center" style="font-size:30px"><b>Miller Time</b>
+   </td></tr>
 
-    {% comment %} navbar {% endcomment %}
-    <p align="right">
-        <table border="0">
-            <tr>
-                <td><b>home </b></td> 
-                <td><a href="/blog/">blog </a></td>
-                <td><a href="/links/">links </a></td>
-                <td><a href="/aboutme/">aboutme</a></td>
-            </tr>
-        </table>
-    </p>
+   <tr><td><img src="/media/scott_pilgrim.jpg" />
+   </td></tr>
 
-    {% comment %} body {% endcomment %}
-    <table align="right">
-    <tr><td align="center">
-    <b>new</b> You may notice a huge style change on the site. That's because I<br />
-    finally saw Scott Pilgrim vs. The World. Get used to this style, I am in<br />
-    love with that movie.
-    </td></tr>
-    <tr><td align="center">
-    This is the fresh Python version of the site, reconstructed on<br />
-    an Sqlite database to better manage the blog. It's built on Django, and I<br />
-    know little about Django or Sqlite. Having fun with it though!
-    </td></tr>
-    <tr><td align="center">
-    Thanks for checking out my website! It's still under construction and<br />
-    definitely needs work. If you have any suggestions feel free to email me at:<br />
-    miller.time.baby at gmail.com
-    </td></tr>
-    <tr><td align="right">
-        <b><a href="/schedule/">Fall Schedule</a></b>
-    </td></tr>
-    </table>
+   <tr><td align="center">
+   <table id="nav" border="0">
+    <tr>
+    <td><b>home </b></td> 
+    <td><a href="/blog/">blog </a></td>
+    <td><a href="/links/">links </a></td>
+    <td><a href="/aboutme/">aboutme</a></td>
+    </tr>
+   </table><!--nav-->
+   </td></tr>
+  </table><!--left-->
+  </td>
+
+  <td valign="center">
+  <table id="text" width="600" style="position:absolute; left:350px; top:0px">
+   <tr><td align="center" valign="center">
+   <br /><br />
+   Hey here's my humble website. Mainly using as a personal blog. Still working
+   on a lot of the design aspect. Currently running Cherokee Web Server and
+   using Django.
+   </td></tr>
+   <tr><td align="right">
+   <b><a href="/schedule/">Fall Schedule</a></b>
+   </td></tr>
+  </table><!--text-->
+  </td></tr>
+</table><!--main-->
+<p align="center" style="position:absolute; bottom:0px">
+<a href="/ie/">View Internet Explorer version of the site</a></p>
 </body>
 </html>

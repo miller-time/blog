@@ -12,6 +12,10 @@ def archive(request):
     latest_blogs_list = Post.objects.all().order_by('pub_date')
     return render_to_response('posts/archive.html', {'latest_blogs_list': latest_blogs_list})
 
+def ie(request):
+    latest_blogs_list = Post.objects.all().order_by('pub_date')
+    return render_to_response('ie.html', {'latest_blogs_list': latest_blogs_list})
+
 def aboutme(request):
     return render_to_response('aboutme.html',)
 

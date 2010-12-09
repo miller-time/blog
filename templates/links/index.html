@@ -2,16 +2,13 @@
 <head>
 <title>MillerTime - Links</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-<style type="text/css">
-    body { color:black; background-color:white; }
-    a { text-decoration:none; color:blue; }
-</style>
+<link rel="stylesheet" type="text/css" href="/media/page.css" />
 </head>
 
 <body>
- <table id="main" align="center" width="800">
+ <table id="main">
   <tr><td valign="top">
-  <table id="left" style="position:fixed; float:left; left:100px; top:0px">
+  <table id="left">
    <tr><td align="center" style="font-size:30px"><b>Miller Time</b>
    </td></tr>
 
@@ -19,7 +16,7 @@
    </td></tr>
 
    <tr><td align="center">
-   <table id="nav" border="0">
+   <table id="nav">
     <tr>
     <td><a href="/">home </a></td> 
     <td><a href="/blog/">blog </a></td>
@@ -33,7 +30,7 @@
 
   <td align="left">
   {% if links_list %}
-  <table id="links" width="600" style="position:absolute; left:350px; top:0px">
+  <table id="text">
    {% for link in links_list %}
    <tr><td align="left">
    <b><big>{{ link.title }}</big></b><br />
@@ -45,7 +42,7 @@
   {% endif %}
   </td></tr>
 </table><!--main-->
-<p align="center" style="position:absolute; bottom:0px">
+<p id="footer">
 <a href="/ie/">View Internet Explorer version of the site</a></p>
 </body>
 </html>

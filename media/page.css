@@ -1,0 +1,38 @@
+body { 
+color:black; 
+background-color:white; 
+}
+
+a { 
+text-decoration:none; 
+color:blue; 
+}
+
+#main {
+text-align:center;
+width:800px;
+}
+
+#left {
+position:fixed;
+float:left;
+left:100px;
+top:0px;
+}
+
+#nav {
+border:0;
+}
+
+#text {
+width:600px;
+position:absolute;
+left:350px;
+top:0px;
+}
+
+#footer {
+text-align:center;
+position:absolute;
+bottom:0px;
+}

@@ -2,18 +2,13 @@
 <head>
 <title>MillerTime - Blog</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-<style type="text/css">
-    body { color:black; background-color:white; }
-    a { text-decoration:none; color:blue; }
-</style>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
-<script type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/media/page.css" />
 </head>
 
 <body>
-<table id="main" align="center" width="800">
+<table id="main">
  <tr><td valign="top">
- <table id="left" style="position:fixed; float:left; left:100px; top:0px">
+ <table id="left">
   <tr><td align="center" style="font-size:30px"><b>Miller Time</b>
   </td></tr>
 
@@ -39,7 +34,7 @@
 
  <td align="right">
  {% if latest_blogs_list %}
- <table id="posts" width="600" style="position:absolute; left:350px; top:0px">
+ <table id="text">
   {% for blog in latest_blogs_list %}
   <tr><td align="left">
   <b><big>{{ blog.title }}</big><br />
@@ -52,7 +47,7 @@
  {% endif %}
  </td></tr>
 </table><!--main-->
-<p align="center" style="position:absolute; bottom:0px">
+<p id="footer">
 <a href="/ie/">View Internet Explorer version of the site</a></p>
 </body>
 </html>

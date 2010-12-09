@@ -1,3 +1,7 @@
+body, a, p, h1 {
+font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+
 body { 
 color:black; 
 background-color:white; 
@@ -11,6 +15,8 @@ color:blue;
 #main {
 text-align:center;
 width:800px;
+top:0px;
+margin:0px;
 }
 
 #left {
@@ -20,11 +26,18 @@ left:100px;
 top:0px;
 }
 
+#heading {
+top:0px;
+margin:0px;
+font-size:30px;
+}
+
 #nav {
 border:0;
 }
 
 #text {
+text-align:left;
 width:600px;
 position:absolute;
 left:350px;

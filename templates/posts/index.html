@@ -28,7 +28,7 @@
   {% for blog in latest_blogs_list %}
   <b><big>{{ blog.title }}</big><br />
   Date Published: {{ blog.pub_date }}<br /></b>
-  {{ blog.body|markdown:"safe" }}<br /><br />
+  {{ blog.body|markdown:"safe" }}<br />
   {% endfor %}
  </div><!--posts-->
  {% else %}

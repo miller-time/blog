@@ -1,27 +1,16 @@
-<html>
-<head>
-<title>MillerTime - About Me</title>
-<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-<link rel="stylesheet" type="text/css" href="/media/page.css" />
-</head>
+{% extends "base.html" %}
 
-<body>
- <div id="main">
-  <div id="left">       <!-- left side -->
-   <p id="heading"><b>Miller Time</b></p>
+{% block title %}MillerTime - About Me{% endblock %}
 
-   <img src="/media/scott_pilgrim.jpg" />
-
-   <div id="nav">
+{% block navbar %}
     <a href="/">home </a> 
     <a href="/blog/">blog </a>
     <a href="/links/">links </a>
     <b>aboutme</b>
-   </div><!--nav-->
-   
-  </div><!--left-->
+{% endblock %}
 
-  <div id="text">       <!-- right side -->
+{% block content %}
+ <div id="text">       <!-- right side -->
    <br /><br />
    Hi, my name is Russell. I'm a Computer Science student at
    Portland State University. This is a relatively new website
@@ -55,12 +44,4 @@
    Github, which is also on the links page.
    
   </div><!--text-->
-</div><!--main-->
-<p id="footer">
-<b>
-Copyright 2010 Russell Miller | Brought to you by 
-<a href="http://www.cherokee-project.com/">Cherokee</a> and 
-<a href="http://www.djangoproject.com/">Django</a> | 
-<a href="/ie/">Internet Explorer Users</a></b></p>
-</body>
-</html>
+{% endblock %}

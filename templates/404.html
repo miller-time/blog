@@ -1,28 +1,13 @@
-<html>
-<head>
-<title>Page Not Found</title>
-<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
-<link rel="stylesheet" type="text/css" href="/media/page.css" />
-</head>
+{% block title %}Page Not Found{% endblock %}
 
-<body>
-<div id="main">
- <div id="left">
-  <p id="heading"><b>Miller Time</b></p>
-
-  <img src="/media/scott_pilgrim.jpg" />
-
-  <div id="nav">
+{% block navbar %}
    <a href="/">home </a> 
    <a href="/blog/">blog </a>
    <a href="/links/">links </a>
    <a href="/aboutme/">aboutme</a>
-  </div><!--nav-->
+{% endblock %}
 
- </div><!--left-->
-
-</div><!--main-->
-
+{% block content %}
 <div id="pnf">
  <h1>Page Not Found</h1><br />
  <p>
@@ -31,11 +16,4 @@
  to return whence you came.</b>
  </p>
 </div>
-<p id="footer">
-<b>
-Copyright 2010 Russell Miller | Brought to you by 
-<a href="http://www.cherokee-project.com/">Cherokee</a> and 
-<a href="http://www.djangoproject.com/">Django</a> | 
-<a href="/ie/">Internet Explorer Users</a></b></p>
-</body>
-</html>
+{% endblock %}

@@ -1,29 +1,19 @@
+{% extends "base.html" %}
 {% load markup %}
-<html>
-<head>
-<title>MillerTime - Archive</title>
-<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-<link rel="stylesheet" type="text/css" href="/media/page.css" />
-</head>
 
-<body>
-<div id="main">
- <div id="left">
-  <p id="heading"><b>Miller Time</b></p>
+{% block title %}MillerTime - Archive{% endblock %}
 
-  <img src="/media/scott_pilgrim.jpg" />
-
-  <div id="nav">
+{% block navbar %}
     <a href="/">home </a> 
     <a href="/blog/">blog </a>
     <a href="/links/">links </a>
     <a href="/aboutme/">aboutme</a>
     <br />
-    <b>archive</b>  <a style="color:white" href="/admin/">admin</a>
-  </div><!--nav-->
+    <b>archive</b>
+    <a style="color:white" href="/admin/">admin</a>
+{% endblock %}
 
- </div><!--left-->
-
+{% block content %}
  {% if latest_blogs_list %}
  <div id="text">
  <p style="text-align:center"><b>Blog Archive</b></p>
@@ -36,12 +26,4 @@
  {% else %}
  No blogs created yet.
  {% endif %}
-</div><!--main-->
-<p id="footer">
-<b>
-Copyright 2010 Russell Miller | Brought to you by 
-<a href="http://www.cherokee-project.com/">Cherokee</a> and 
-<a href="http://www.djangoproject.com/">Django</a> | 
-<a href="/ie/">Internet Explorer Users</a></b></p>
-</body>
-</html>
+{% endblock %}

@@ -1,28 +1,16 @@
-<html>
-<head>
-<title>MillerTime - Schedule</title>
-<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-<style type="text/css">
-    body { color:black; background-color:white; }
-    a { text-decoration:none; color:blue; }
-</style>
-</head>
+{% extends "base.html" %}
 
-<body>
-    <p align="center" style="font-size:30px"><b>Miller Time</b></p>
+{% block title %}MillerTime - Schedule{% endblock %}
 
-    <p align="center">
-    <table border="0">
-        <tr>
-            <td><a href="/">home </a></td> 
-            <td><a href="/blog/">blog </a></td>
-            <td><a href="/links/">links </a></td>
-            <td><a href="/aboutme/">aboutme</a></td>
-        </tr>
-    </table>
+{% block navbar %}
+    <a href="/">home </a></td> 
+    <a href="/blog/">blog </a></td>
+    <a href="/links/">links </a></td>
+    <a href="/aboutme/">aboutme</a></td>
+{% endblock %}
 
-    <h1 align="center">
-    Winter break!
-    </h1>
-</body>
-</html>
+{% block content %}
+<div id="text">
+ <h1 align="center">Winter break!</h1>
+</div>
+{% endblock %}

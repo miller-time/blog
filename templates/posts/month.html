@@ -1,6 +1,16 @@
 {% extends "posts/archive.html" %}
 {% load markup %}
 
+{% block navbar %}
+   <a href="/">home </a> 
+   <a href="/blog/">blog </a>
+   <a href="/links/">links </a>
+   <a href="/aboutme/">aboutme</a>
+   <br />
+   <a href="/blog/archive/">archive</a>
+   <a style="color:white" href="/admin/">admin</a> 
+{% endblock %}
+
 {% block content %}
 <div id="text">
 <p style="text-align:center"><b>Blog Archive</b></p>

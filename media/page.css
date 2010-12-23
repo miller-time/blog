@@ -32,10 +32,6 @@ margin:0px;
 font-size:30px;
 }
 
-#nav {
-border:0;
-}
-
 #text {
 text-align:left;
 width:600px;
@@ -60,4 +56,10 @@ font-size:9;
 position:absolute;
 left:350px;
 top:0px;
+}
+
+#archive {
+height:120px;
+width:120px;
+text-align:center;
 }

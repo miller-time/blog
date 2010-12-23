@@ -14,16 +14,71 @@
 {% endblock %}
 
 {% block content %}
- {% if latest_blogs_list %}
  <div id="text">
  <p style="text-align:center"><b>Blog Archive</b></p>
- {% for blog in latest_blogs_list %}
- <b><big>{{ blog.title }}</big><br />
- Date Published: {{ blog.pub_date }}<br /></b>
- {{ blog.body|markdown:"safe" }}<br />
- {% endfor %}
+ <b><big>2010</big></b><br />
+ <table border="2">
+ <tr><td id="archive">
+ </td><td id="archive">
+ <b><a href="/blog/archive/jun2010/">June</a></b>
+ </td><td id="archive">
+ <b><a href="/blog/archive/jul2010/">July</a></b>
+ </td><td id="archive">
+ <b><a href="/blog/archive/aug2010/">August</a></b>
+ </td></tr>
+ <!-- 2nd row-->
+ <tr><td id="archive">
+ <b><a href="/blog/archive/sep2010/">September</a></b>
+ </td><td id="archive">
+ <b><a href="/blog/archive/oct2010/">October</a></b>
+ </td><td id="archive">
+ <b><a href="/blog/archive/nov2010/">November</a></b>
+ </td><td id="archive">
+ <b><a href="/blog/archive/dec2010/">December</a></b>
+ </td></tr>
+ </table>
+<!-- comment
+  {% for blog in jun2010 %}
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br />
+  {% endfor %}
+
+  {% for blog in jul2010 %}
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br />
+  {% endfor %}
+ <b><big>August</big></b>
+  {% for blog in aug2010 %}
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br />
+  {% endfor %}
+ <b><big>September</big></b>
+  {% for blog in sep2010 %}
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br />
+  {% endfor %}
+ <b><big>October</big></b>
+  {% for blog in oct2010 %}
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br />
+  {% endfor %}
+ <b><big>November</big></b>
+  {% for blog in nov2010 %}
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br />
+  {% endfor %}
+ <b><big>December</big></b>
+  {% for blog in dec2010 %}
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br />
+  {% endfor %}
+-->
  </div><!--posts-->
- {% else %}
- No blogs created yet.
- {% endif %}
 {% endblock %}

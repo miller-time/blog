@@ -1,0 +1,24 @@
+{% extends "posts/archive.html" %}
+{% load markup %}
+
+{% block content %}
+<div id="text">
+<p style="text-align:center"><b>Blog Archive</b></p>
+{% block month %}
+<b><big>2010 - Month</big></b><br />
+<a href="/blog/archive/">Calendar</a> <a href="">NextMonth</a><br />
+{% endblock %}
+<hr>
+{% block posts %}
+ {% if month %}
+  {% for blog in month %}
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br />
+  {% endfor %}
+ {% else %}
+ <p>No posts this month!</p>
+ {% endif %}
+</div>
+{% endblock %}
+{% endblock %}

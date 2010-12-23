@@ -1,0 +1,20 @@
+{% extends "posts/month.html" %}
+{% load markup %}
+
+{% block month %}
+<b><big>2010 - December</big></b><br />
+<a href="/blog/archive/nov2010/">prev</a> <a href="/blog/archive/">calendar</a> next<br />
+{% endblock %}
+
+{% block posts %}
+{% if dec2010 %}
+ {% for blog in dec2010 %}
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br />
+  {% endfor %}
+ {% else %}
+ <p>No posts this month!</p>
+ {% endif %}
+</div>
+{% endblock %}

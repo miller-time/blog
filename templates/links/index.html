@@ -11,7 +11,7 @@
 
 {% block content %}
   {% if links_list %}
-  <div id="text">
+  <div class="text">
    {% for link in links_list %}
    <b><big>{{ link.title }}</big></b><br />
    {{ link.location|urlize }}<br />

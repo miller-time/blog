@@ -15,7 +15,7 @@
 
 {% block content %}
  {% if latest_blogs_list %}
- <div id="text">
+ <div class="text">
   {% for blog in latest_blogs_list %}
   <b><big>{{ blog.title }}</big><br />
   Date Published: {{ blog.pub_date }}<br /></b>

@@ -14,5 +14,5 @@ def aboutme(request):
 def schedule(request):
     return render_to_response('schedule.html',)
 
-def xmas(request):
-    return render_to_response('xmas.html',)
+def wishlist(request):
+    return render_to_response('wishlist.html',)

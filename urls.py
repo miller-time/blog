@@ -16,5 +16,4 @@ urlpatterns += patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^blog/', include('posts.urls')),
     (r'^links/', include('links.urls')),
-    (r'^photo/', include('photo.urls')),
 )

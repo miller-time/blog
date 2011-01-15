@@ -6,7 +6,7 @@ def index(request):
     all_slides = Slide.objects.all()
     newest = all_slides[0]
     old_slides = all_slides[1:]
-    return render_to_response('index.html', {'newest': newest, 'old_slides':old_slides})
+    return render_to_response('index.html', {'newest':newest, 'old_slides':old_slides})
 
 def ie(request):
     latest_blogs_list = Post.objects.all().order_by('pub_date')

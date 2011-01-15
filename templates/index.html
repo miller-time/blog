@@ -1,1 +1,18 @@
 {% extends "base.html" %}
+
+{% block content %}
+ <div class="text">
+  <br /><br />
+  {% if newest %}
+  <img src="/media/{{ newest.filename }}" /><br />
+  {% endif %}
+  {% if old_slides %}
+    <p>Old frontpage images:<br />
+    {% for slide in old_slides %}
+    <a href="/media/{{ slide.filename }}">{{ slide.filename }}</a> 
+    {% endfor %}
+    </p>
+  {% endif %}
+  <b><p style="text-align:left"><a href="/schedule/">Winter Schedule</a></b></p>
+ </div>
+{% endblock %}

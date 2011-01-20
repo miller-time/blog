@@ -81,10 +81,8 @@ $(function() {
   {% endif %}
   {% if old_slides%}
   {% for slide in old_slides %}
-  <img src="/media/blank.jpg" /><!-- clear the space -->
   <img src="/media/{{ slide.filename }}" />
   {% endfor %}
-  <img src="/media/blank.jpg" />
   {% endif %}
  </div>
 {% endblock %}

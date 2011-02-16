@@ -20,3 +20,6 @@ def schedule(request):
 
 def wishlist(request):
     return render_to_response('wishlist.html',)
+
+def connectthree(request):
+    return render_to_response('connectthree.html',)

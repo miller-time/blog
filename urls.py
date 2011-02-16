@@ -9,6 +9,7 @@ urlpatterns = patterns('blog.views',
     (r'^aboutme/$', 'aboutme'),
     (r'^schedule/$', 'schedule'),
     (r'^wishlist/$', 'wishlist'),
+    (r'^ConnectThree/$', 'connectthree'),
 )
 
 urlpatterns += patterns('',

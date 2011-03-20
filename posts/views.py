@@ -43,3 +43,7 @@ def archive_jan2011(request):
 def archive_feb2011(request):
     feb2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=2)
     return render_to_response('posts/feb2011.html', {'feb2011': feb2011})
+
+def archive_mar2011(request):
+    mar2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=3)
+    return render_to_response('posts/mar2011.html', {'mar2011': mar2011})

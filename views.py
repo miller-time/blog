@@ -15,11 +15,14 @@ def ie(request):
 def aboutme(request):
     return render_to_response('aboutme.html',)
 
+def pics(request):
+    return render_to_response('pics.html',)
+
 def schedule(request):
     return render_to_response('schedule.html',)
 
 def wishlist(request):
     return render_to_response('wishlist.html',)
 
-def connectthree(request):
-    return render_to_response('connectthree.html',)
+def downloads(request):
+    return render_to_response('downloads.html',)

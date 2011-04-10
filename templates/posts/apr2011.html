@@ -1,0 +1,20 @@
+{% extends "posts/month.html" %}
+{% load markup %}
+
+{% block month %}
+<b><big>2011 - April</big></b><br />
+<a href="/blog/archive/mar2011/">prev</a> <a href="/blog/archive/">calendar</a> next<br />
+{% endblock %}
+
+{% block posts %}
+{% if apr2011 %}
+ {% for blog in apr2011 %}
+  <b><big>{{ blog.title }}</big><br />
+  Date Published: {{ blog.pub_date }}<br /></b>
+  {{ blog.body|markdown:"safe" }}<br />
+  {% endfor %}
+ {% else %}
+ <p>No posts this month!</p>
+ {% endif %}
+</div>
+{% endblock %}

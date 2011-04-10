@@ -7,9 +7,10 @@ urlpatterns = patterns('blog.views',
     (r'^/?$', 'index'),
     (r'^ie/$', 'ie'),
     (r'^aboutme/$', 'aboutme'),
+    (r'^pics/$', 'pics'),
     (r'^schedule/$', 'schedule'),
     (r'^wishlist/$', 'wishlist'),
-    (r'^ConnectThree/$', 'connectthree'),
+    (r'^downloads/$', 'downloads'),
 )
 
 urlpatterns += patterns('',

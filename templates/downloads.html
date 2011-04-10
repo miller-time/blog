@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}MillerTime - Downloads{% endblock %}
+
+{% block headstuff %}
+<style type="text/css">
+h3 {
+    background-color:gray;
+}
+</style>
+{% endblock %}
+
+{% block navbar %}
+   <a href="/">home </a> 
+   <a href="/blog/">blog </a>
+   <a href="/links/">links </a>
+   <a href="/aboutme/">aboutme</a>
+   <br />
+   <b>my apps!</b>(new)
+{% endblock %}
+
+{% block content %}
+ <div class="text">
+  <h2>Downloads</h2>
+  I've decided to attempt to host binaries for the programs I write I feel are worth sharing. If nothing else,
+  hopefully one day I can simply look back and chuckle. There may be other programs I can find to add here, and
+  there are some I'm still working on. Definitely check out my <a href="http://www.github.com/miller-time/">Github</a> 
+  page to see other projects I've done.
+
+  <h3>Connect Three</h3>
+  A simple alternate version of the popular "Connect Four" game played with checkers. This was an
+  assignment for my recent Artificial Intelligence class. Check out the Github link to read more.<br />
+  <br />
+  Binaries for:<br />
+  <a href="/media/apps/connectthree/ConnectThree_Linux32">Linux 32-bit</a><br />
+  <a href="/media/apps/connectthree/connectthree_win.zip">Windows 7 64-bit</a><br />
+  <a href="/media/apps/connectthree/connectthree_osx.tar">Mac OSX</a><br />
+  <br />
+  or... <a href="https://github.com/millertime-homework/cs441">Source</a> (github)<br />
+
+  <h3>Tic Tac Toe</h3>
+  A simple Tic Tac Toe game for 2 players -- with a twist! Cheating is allowed. Either player can play
+  out of turn. See the documentation on my Bitbucket for more info.<br />
+  <br />
+  Binaries for:<br />
+  <a href="/media/apps/tictactoe/TicTacToe_linux32">Linux 32-bit</a><br />
+  <a href="/media/apps/tictactoe/TicTacToe_linux64">Linux 64-bit</a><br />
+  <a href="/media/apps/tictactoe/tictactoe_win.zip">Windows 7 64-bit<a/><br />
+  <a href="/media/apps/tictactoe/tictactoe_osx.tar">Mac OSX</a><br />
+  <br />
+  or... <a href="https://bitbucket.org/millertime/tictactoe/src">Source</a> (bitbucket)
+
+  <h3>FAQ</h3>
+  <b>Q:</b> Do I really need all of these .dll files to run the Windows Qt programs?<br />
+  <b>A:</b> Yes! However, you only need one copy of them. Just put all .exe files in the same folder!<br />
+  <br />
+  <b>Q:</b> My OS isn't listed. What do I do?!<br />
+  <b>A:</b> Download the source and compile it. Feel free to <a href="mailto:miller.time.baby@gmail.com">email</a> me the binary!
+  I have tried to compile all of my programs on the platforms that are available to me. That's the best I can do.<br />
+
+  <br />
+  <br />
+ </div>
+{% endblock %}

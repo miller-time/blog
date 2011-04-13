@@ -3,6 +3,15 @@
 
 {% block title %}MillerTime - Blog{% endblock %}
 
+{% block headstuff %}
+<style type="text/css">
+h3 {
+    text-align:center;
+    background-color:gray;
+}
+</style>
+{% endblock %}
+
 {% block navbar %}
    <a href="/">home </a> 
    <b>blog </b>
@@ -24,7 +33,7 @@
  {% if latest_blogs_list %}
  <div class="text">
   {% for blog in latest_blogs_list %}
-  <b><big>{{ blog.title }}</big><br />
+  <b><h3>{{ blog.title }}</h3><br />
   Date Published: {{ blog.pub_date }}<br /></b>
   {{ blog.body|markdown:"safe" }}<br />
   {% endfor %}

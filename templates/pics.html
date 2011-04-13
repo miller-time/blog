@@ -72,6 +72,15 @@ $(function() {
 </style> 
 {% endblock %}
 
+{% block navbar %}
+    <a href="/">home </a> 
+    <a href="/blog/">blog </a>
+    <a href="/links/">links </a>
+    <a href="/aboutme/">aboutme</a>
+    <br />
+    <a href="/downloads/">my apps!</a>(new)
+{% endblock %}
+
 {% block content %}
  <div class="text">  
   Thanks for the slideshow script, <a href="http://JonRaasch.com">JonRaasch</a>
@@ -85,6 +94,8 @@ $(function() {
   {% for slide in old_slides %}
   <img src="/media/{{ slide.filename }}" />
   {% endfor %}
+  {% else %}
+  Nothing to see :(
   {% endif %}
  </div>
 

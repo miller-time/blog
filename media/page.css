@@ -28,6 +28,13 @@ border-spacing:2px;
 background-color:lightblue;
 }
 
+pre {
+color:green;
+background-color:black;
+border-style:groove;
+border-color:green;
+}
+
 .main {
 text-align:center;
 width:800px;

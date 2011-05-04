@@ -51,3 +51,7 @@ def archive_mar2011(request):
 def archive_apr2011(request):
     apr2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=4)
     return render_to_response('posts/apr2011.html', {'apr2011': apr2011})
+
+def archive_may2011(request):
+    may2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=5)
+    return render_to_response('posts/may2011.html', {'may2011': may2011})

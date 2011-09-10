@@ -55,3 +55,19 @@ def archive_apr2011(request):
 def archive_may2011(request):
     may2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=5)
     return render_to_response('posts/may2011.html', {'may2011': may2011})
+
+def archive_jun2011(request):
+    jun2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=6)
+    return render_to_response('posts/jun2011.html', {'jun2011': jun2011})
+
+def archive_jul2011(request):
+    jul2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=7)
+    return render_to_response('posts/jul2011.html', {'jul2011': jul2011})
+
+def archive_aug2011(request):
+    aug2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=8)
+    return render_to_response('posts/aug2011.html', {'aug2011': aug2011})
+
+def archive_sep2011(request):
+    sep2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=9)
+    return render_to_response('posts/sep2011.html', {'sep2011': sep2011})

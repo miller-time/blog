@@ -2,13 +2,13 @@
 {% load markup %}
 
 {% block month %}
-<b><big>2011 - May</big></b><br />
-<a href="/blog/archive/apr2011/">prev</a> <a href="/blog/archive/">calendar</a> <a href="/blog/archive/jun2011/">next</a><br />
+<b><big>2011 - July</big></b><br />
+<a href="/blog/archive/jun2011/">prev</a> <a href="/blog/archive/">calendar</a> <a href="/blog/archive/aug2011/">next</a><br />
 {% endblock %}
 
 {% block posts %}
-{% if may2011 %}
- {% for blog in may2011 %}
+{% if jul2011 %}
+ {% for blog in jul2011 %}
   <b><big>{{ blog.title }}</big><br />
   Date Published: {{ blog.pub_date }}<br /></b>
   {{ blog.body|markdown:"safe" }}<br />

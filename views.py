@@ -21,8 +21,5 @@ def pics(request):
 def schedule(request):
     return render_to_response('schedule.html',)
 
-def wishlist(request):
-    return render_to_response('wishlist.html',)
-
 def downloads(request):
     return render_to_response('downloads.html',)

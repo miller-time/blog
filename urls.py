@@ -9,7 +9,6 @@ urlpatterns = patterns('blog.views',
     (r'^aboutme/$', 'aboutme'),
     (r'^pics/$', 'pics'),
     (r'^schedule/$', 'schedule'),
-    (r'^wishlist/$', 'wishlist'),
     (r'^downloads/$', 'downloads'),
 )
 

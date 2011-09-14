@@ -2,24 +2,13 @@
 
 {% block title %}MillerTime - Links{% endblock %}
 
-{% block navbar %}
-    <a href="/">home </a> 
-    <a href="/blog/">blog </a>
-    <b>links </b>
-    <a href="/aboutme/">aboutme</a>
-    <br />
-    <a href="/downloads/">my apps!</a>(new)
-{% endblock %}
-
 {% block content %}
   {% if links_list %}
-  <div class="text">
    {% for link in links_list %}
    <b><big>{{ link.title }}</big></b><br />
    {{ link.location|urlize }}<br />
    {% endfor %}
   <br /><br />
-  </div><!--links-->
   {% else %}
   No links added yet.
   {% endif %}

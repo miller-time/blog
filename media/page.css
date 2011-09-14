@@ -1,4 +1,4 @@
-html, body, a, p, h1 {
+html, body, a, p, h1, h2 {
 font-family:"Trebuchet MS", Helvetica, sans-serif;
 height:100%;
 }
@@ -46,23 +46,33 @@ word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 #container {
-width:828px;
+width:860px;
 min-height:100%;
 text-align:center;
 }
 
 #sidebar {
-width:228px;
+padding-top:50px;
+padding-left:10px;
+width:200px;
 float:left;
 }
 
 #heading {
-font-size:30px;
+width:100%;
+padding-top:15px;
+padding-bottom:15px;
+text-align:center;
+}
+
+#heading a {
+color:gray;
 }
 
 #content {
 overflow:auto;
 padding-top:5px;
+padding-left:50px;
 padding-bottom:10px;
 width:600px;
 float:left;
@@ -74,8 +84,14 @@ position:relative;
 margin-top:-10px;
 height:10px;
 clear:both;
-padding-left:228px;
+padding-left:50px;
 font-size:9px;
 background-color:white;
 color:gray;
+}
+
+#blogheading {
+font-size:10px;
+text-align:center;
+padding-bottom:10px;
 }

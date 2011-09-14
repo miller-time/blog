@@ -10,35 +10,33 @@ h3 {
     background-color:gray;
 }
 </style>
-{% endblock %}
 
-{% block navbar %}
-   <a href="/">home </a> 
-   <b>blog </b>
-   <a href="/links/">links </a>
-   <a href="/aboutme/">aboutme</a>
-   <br />
-   <a href="/downloads/">my apps!</a>(new)
-   <br />
-   <a href="/blog/archive/">archive</a>
-   <a style="color:white" href="/admin/">admin</a> 
-   <br />
-   <a href=http://millertime.dnsdojo.com/blog/feed/>
-   <img src=http://www.google.com/images/feed-icon.gif /></a>
-   <a href="http://www.google.com/ig/addtoreader?et=4d855284-eyiJuuk&source=ign_pLt&feedurl=http://millertime.dnsdojo.com/blog/feed&feedtitle=Millertime-Blog">
-   <img src=http://buttons.googlesyndication.com/fusion/add.gif /></a>
+<!-- google analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22698132-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 {% endblock %}
 
 {% block content %}
- {% if latest_blogs_list %}
- <div class="text">
-  {% for blog in latest_blogs_list %}
-  <b><h3>{{ blog.title }}</h3><br />
+{% if latest_blogs_list %}
+<p id="blogheading">You're looking at the latest 5 posts. The rest are in the
+  <a href="/blog/archive/">archive</a>.</p>
+{% for blog in latest_blogs_list %}
+<b><h3>{{ blog.title }}</h3><br />
   Date Published: {{ blog.pub_date }}<br /></b>
-  {{ blog.body|markdown:"safe" }}<br />
-  {% endfor %}
- </div><!--text-->
- {% else %}
- No blogs created yet.
- {% endif %}
+{{ blog.body|markdown:"safe" }}<br />
+{% endfor %}
+{% else %}
+No blogs created yet.
+{% endif %}
 {% endblock %}

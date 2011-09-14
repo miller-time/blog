@@ -8,28 +8,40 @@
   {% block headstuff %}
   <!-- add scripts or links here -->
   {% endblock %}
+  <!-- +1 -->
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+  </script>
 </head>
 
 <body>
   <div id="container">
-    <div id="sidebar">
-      <p id="heading"><b>Miller Time</b></p>
-
-      <img src="/media/scott_pilgrim.jpg" /><br />
-
-      {% block navbar %}
-      <a href="/">home </a> 
-      <a href="/blog/">blog </a>
-      <a href="/links/">links </a>
-      <a href="/aboutme/">aboutme</a>
-      <br />
-      <a href="/downloads/">my apps!</a>(new)
-      {% endblock %}
-    </div>
     <div id="content">
+      <div id="heading"><a href="/"><h2>millertime</h2></a></div>
     {% block content %}
     <!-- content section goes here -->
     {% endblock %}
+    </div>
+    
+    <div id="sidebar">
+
+      <img src="/media/me.jpg" /><br />
+
+      <b>Russell Miller</b><br />
+      student<br />
+      hacker<br />
+      gamer<br />
+      
+      <br />
+      <a href="/random/">totally random</a><br />
+      <a href="http://millertime.dnsdojo.com/blog/feed/">
+        <img src=http://www.google.com/images/feed-icon.gif />
+      </a>
+      <a href="http://www.google.com/ig/addtoreader?et=4d855284-eyiJuuk&source=ign_pLt&feedurl=http://millertime.dnsdojo.com/blog/feed&feedtitle=Millertime-Blog">
+        <img src=http://buttons.googlesyndication.com/fusion/add.gif />
+      </a><br />
+      
+      <g:plusone></g:plusone>
+
     </div>
   </div>
   <div id="footer">

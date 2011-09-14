@@ -40,14 +40,14 @@ white-space: -o-pre-wrap;    /* Opera 7 */
 word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-.main {
+.container {
 text-align:center;
 width:800px;
 top:0px;
 margin:0px;
 }
 
-.left {
+.sidebar {
 position:fixed;
 float:left;
 left:100px;
@@ -60,7 +60,7 @@ margin:0px;
 font-size:30px;
 }
 
-.text {
+.content {
 text-align:left;
 width:600px;
 position:absolute;

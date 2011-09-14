@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <p class="heading"><b>Miller Time</b></p>
+  <div id="container">
+    <div id="sidebar">
+      <p id="heading"><b>Miller Time</b></p>
 
       <img src="/media/scott_pilgrim.jpg" /><br />
 
@@ -26,13 +26,13 @@
       <a href="/downloads/">my apps!</a>(new)
       {% endblock %}
     </div>
+    <div id="content">
     {% block content %}
     <!-- content section goes here -->
     {% endblock %}
-    <br />
-    <br />
+    </div>
   </div>
-  <div class="footer">
+  <div id="footer">
     <b>
       Copyright 2010-2011 Russell Miller | Brought to you by 
       <a href="http://www.cherokee-project.com/">Cherokee</a> and 

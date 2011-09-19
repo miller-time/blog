@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% load markup %}
 
+{% block headstuff %}
+<style type="text/css">
+h3 {
+    text-align:center;
+    background-color:gray;
+}
+</style>
+{% endblock %}
+
 {% block content %}
 <p style="text-align:center"><b>Blog Archive</b></p>
 {% block month %}
@@ -11,8 +20,8 @@
 {% block posts %}
 {% if month %}
 {% for blog in month %}
-<b><big>{{ blog.title }}</big><br />
-  Date Published: {{ blog.pub_date }}<br /></b>
+<h3>{{ blog.title }}</h3><br />
+  Date Published: {{ blog.pub_date }}<br />
 {{ blog.body|markdown:"safe" }}<br />
 {% endfor %}
 {% else %}

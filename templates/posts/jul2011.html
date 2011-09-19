@@ -9,8 +9,8 @@
 {% block posts %}
 {% if jul2011 %}
  {% for blog in jul2011 %}
-  <b><big>{{ blog.title }}</big><br />
-  Date Published: {{ blog.pub_date }}<br /></b>
+  <h3>{{ blog.title }}</h3><br />
+  Date Published: {{ blog.pub_date }}<br />
   {{ blog.body|markdown:"safe" }}<br />
   {% endfor %}
  {% else %}

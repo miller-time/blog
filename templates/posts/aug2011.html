@@ -3,15 +3,14 @@
 
 {% block month %}
 <b><big>2011 - August</big></b><br />
-<a href="/blog/archive/jul2011/">prev</a> <a href="/blog/archive/">calendar</a> <a href="/blog/archive/sep2011/">next</a>
-<br />
+<a href="/blog/archive/jul2011/">prev</a> <a href="/blog/archive/">calendar</a> <a href="/blog/archive/sep2011/">next</a><br />
 {% endblock %}
 
 {% block posts %}
 {% if aug2011 %}
  {% for blog in aug2011 %}
-  <b><big>{{ blog.title }}</big><br />
-  Date Published: {{ blog.pub_date }}<br /></b>
+  <h3>{{ blog.title }}</h3><br />
+  Date Published: {{ blog.pub_date }}<br />
   {{ blog.body|markdown:"safe" }}<br />
   {% endfor %}
  {% else %}

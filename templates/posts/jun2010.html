@@ -9,8 +9,8 @@ prev <a href="/blog/archive/">calendar</a> <a href="/blog/archive/jul2010/">next
 {% block posts %}
 {% if jun2010 %}
  {% for blog in jun2010 %}
-  <b><big>{{ blog.title }}</big><br />
-  Date Published: {{ blog.pub_date }}<br /></b>
+  <h3>{{ blog.title }}</h3><br />
+  Date Published: {{ blog.pub_date }}<br />
   {{ blog.body|markdown:"safe" }}<br />
   {% endfor %}
  {% else %}

@@ -32,7 +32,7 @@ h3 {
 <p id="blogheading">You're looking at the latest 5 posts. The rest are in the
   <a href="/blog/archive/">archive</a>.</p>
 {% for blog in latest_blogs_list %}
-<b><h3>{{ blog.title }}</h3><br />
+<h3>{{ blog.title }}</h3><br />
   Date Published: {{ blog.pub_date }}<br /></b>
 {{ blog.body|markdown:"safe" }}<br />
 {% endfor %}

@@ -24,4 +24,5 @@ urlpatterns = patterns('blog.posts.views',
     (r'^archive/jul2011/$', 'archive_jul2011'),
     (r'^archive/aug2011/$', 'archive_aug2011'),
     (r'^archive/sep2011/$', 'archive_sep2011'),
+    (r'^archive/oct2011/$', 'archive_oct2011'),
 )

@@ -13,7 +13,7 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return "http://millertime.dnsdojo.com/blog/"
+        return "http://millertime.is-leet.com/blog/"
 
 class BlogFeed(Feed):
     title = "Millertime Blog"

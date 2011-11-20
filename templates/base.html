@@ -1,55 +1,49 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title>{% block title %}MillerTime{% endblock %}</title>
-  <link rel="icon" type="image/vnd.microsoft.icon" href="/media/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="/media/page.css" />
-  {% block headstuff %}
-  <!-- add scripts or links here -->
-  {% endblock %}
-  <!-- +1 -->
-  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-  </script>
-</head>
+<!doctype html>
+<meta charset="utf-8">
+<title>{% block title %}MillerTime{% endblock %}</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="/media/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/media/page.css" />
+{% block headstuff %}
+<!-- add scripts or links here -->
+{% endblock %}
+<!-- +1 -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+</script>
 
-<body>
-  <div id="container">
-    <div id="content">
-      <div id="heading"><a href="/"><h2>millertime</h2></a></div>
+<div id="container">
+  <div id="content">
+    <div id="heading"><a href="/"><h2>millertime</h2></a></div>
     {% block content %}
     <!-- content section goes here -->
     {% endblock %}
-    </div>
+  </div>
+  
+  <div id="sidebar">
     
-    <div id="sidebar">
-
-      <img src="/media/me.jpg" /><br />
-
-      <b>Russell Miller</b><br />
-      student<br />
-      hacker<br />
-      gamer<br />
-      
-      <br />
-      <a href="/random/">totally random</a><br />
-      <a href="http://millertime.is-leet.com/blog/feed/">
-        <img src=http://www.google.com/images/feed-icon.gif />
-      </a>
-      <a href="http://www.google.com/ig/addtoreader?et=4d855284-eyiJuuk&source=ign_pLt&feedurl=http://millertime.dnsdojo.com/blog/feed&feedtitle=Millertime-Blog">
-        <img src=http://buttons.googlesyndication.com/fusion/add.gif />
-      </a><br />
-      
-      <g:plusone></g:plusone>
-
-    </div>
+    <img src="/media/me.jpg" /><br />
+    
+    <b>Russell Miller</b><br />
+    student<br />
+    hacker<br />
+    gamer<br />
+    
+    <br />
+    <a href="/random/">totally random</a><br />
+    <a href="http://millertime.is-leet.com/blog/feed/">
+      <img src=http://www.google.com/images/feed-icon.gif />
+    </a>
+    <a href="http://www.google.com/ig/addtoreader?et=4d855284-eyiJuuk&source=ign_pLt&feedurl=http://millertime.is-leet.com/blog/feed&feedtitle=Millertime-Blog">
+      <img src=http://buttons.googlesyndication.com/fusion/add.gif />
+    </a><br />
+    
+    <g:plusone></g:plusone>
+    
   </div>
-  <div id="footer">
-    <b>
-      Copyright 2010-2011 Russell Miller | Brought to you by 
-      <a href="http://www.cherokee-project.com/">Cherokee</a> and 
-      <a href="http://www.djangoproject.com/">Django</a> | 
-      <a href="/ie/">Internet Explorer Users</a></b>
-  </div>
-</body>
-</html>
+</div>
+<div id="footer">
+  <b>
+    Copyright 2010-2011 Russell Miller | Brought to you by 
+    <a href="http://www.cherokee-project.com/">Cherokee</a> and 
+    <a href="http://www.djangoproject.com/">Django</a> | 
+    <a href="/ie/">Internet Explorer Users</a></b>
+</div>

@@ -8,6 +8,9 @@ def index(request):
 def archive(request):
     return render_to_response('posts/archive.html', )
 
+#def month(request):
+#    month = Post.objects.filter(pub_date__year=, pub_date__month=)
+
 def archive_jun2010(request):
     jun2010 = Post.objects.filter(pub_date__year=2010, pub_date__month=6)
     return render_to_response('posts/jun2010.html', {'jun2010': jun2010})

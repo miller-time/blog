@@ -1,6 +1,7 @@
 import settings
 from django.conf.urls.defaults import *
 from django.views.generic.simple import redirect_to
+from django.views.generic import TemplateView
 
 from django.contrib import admin
 admin.autodiscover()
@@ -9,7 +10,7 @@ urlpatterns = patterns(
     'blog.views',
     (r'^/?$', redirect_to, {'url': '/blog/'}),
     (r'^ie/$', 'ie'),
-    (r'^aboutme/$', 'aboutme'),
+    (r'^aboutme/$', TemplateView.as_view(template_name='aboutme.html')),
     (r'^pics/$', 'pics'),
     (r'^schedule/$', 'schedule'),
     (r'^downloads/$', 'downloads'),

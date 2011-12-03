@@ -1,13 +1,11 @@
 from django.shortcuts import render_to_response
 from blog.posts.models import Post
 from blog.slideshow.models import Slide
+from django.views.generic import TemplateView
 
 def ie(request):
     latest_blogs_list = Post.objects.all().order_by('pub_date')
     return render_to_response('ie.html', {'latest_blogs_list': latest_blogs_list})
-
-def aboutme(request):
-    return render_to_response('aboutme.html',)
 
 def pics(request):
     all_slides = Slide.objects.all().order_by('-date_added')
@@ -30,3 +28,4 @@ def test500(request):
 
 def test404(request):
     return render_to_response('404.html',)
+

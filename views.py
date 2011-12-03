@@ -23,3 +23,10 @@ def downloads(request):
 
 def random(request):
     return render_to_response('random.html',)
+
+# test views for error pages
+def test500(request):
+    return render_to_response('500.html',)
+
+def test404(request):
+    return render_to_response('404.html',)

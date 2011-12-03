@@ -75,3 +75,11 @@ def archive_sep2011(request):
 def archive_oct2011(request):
     oct2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=10)
     return render_to_response('posts/oct2011.html', {'oct2011': oct2011})
+
+def archive_nov2011(request):
+    nov2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=11)
+    return render_to_response('posts/nov2011.html', {'nov2011': nov2011})
+
+def archive_dec2011(request):
+    dec2011 = Post.objects.filter(pub_date__year=2011, pub_date__month=12)
+    return render_to_response('posts/dec2011.html', {'dec2011': dec2011})
